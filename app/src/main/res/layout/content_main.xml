@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="horizontal"
+    android:padding="@dimen/layout_padding"
+    tools:context=".activitys.MainActivity"
+    android:id="@+id/container">
+
+
+    <ImageView
+        android:id="@+id/start_flower"
+        android:layout_width="@dimen/start_image_view_height"
+        android:layout_height="@dimen/start_image_view_height"
+        android:layout_gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="@dimen/image_top"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/water_start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/balance_target_view"
+        android:layout_width="@dimen/time_textView_width"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_textView_left"
+        android:layout_marginTop="@dimen/base_image_margin_top_min"
+        android:layout_marginEnd="@dimen/margin_textView_left"
+        android:textAlignment="center"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/input_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start_flower" />
+
+    <TextView
+        android:id="@+id/next_reminder_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_image_margin_top_min"
+        android:background="@color/colorButtonText"
+        android:text="@string/next_reminder_name"
+        android:textAlignment="center"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/time_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/balance_target_view" />
+
+    <TextView
+        android:id="@+id/next_reminder_time_view"
+        android:layout_width="@dimen/time_textView_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/margin_textView_left"
+        android:layout_marginTop="@dimen/base_image_margin_top_min"
+        android:layout_marginEnd="@dimen/margin_textView_left"
+        android:background="@color/colorButtonText"
+        android:textAlignment="center"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/input_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/next_reminder_view" />
+
+    <ImageButton
+        android:id="@+id/water200"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="@dimen/image_button_size_width"
+        android:layout_height="@dimen/image_button_size_height"
+        app:srcCompat="@drawable/water200"
+        android:onClick="addWater"
+        android:layout_marginStart="@dimen/image_button_margin_start"
+        android:layout_marginTop="@dimen/base_image_margin_top"
+        app:layout_constraintTop_toBottomOf="@+id/next_reminder_time_view"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/water300"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="@dimen/image_button_size_width"
+        android:layout_height="@dimen/image_button_size_height"
+        app:srcCompat="@drawable/water300"
+        android:onClick="addWater"
+        android:layout_marginTop="@dimen/base_image_margin_top"
+        app:layout_constraintTop_toBottomOf="@+id/next_reminder_time_view"
+        app:layout_constraintStart_toEndOf="@+id/water200"
+        app:layout_constraintEnd_toStartOf="@+id/water400"/>
+
+    <ImageButton
+        android:id="@+id/water400"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="@dimen/image_button_size_width"
+        android:layout_height="@dimen/image_button_size_height"
+        app:srcCompat="@drawable/water400"
+        android:layout_marginTop="@dimen/base_image_margin_top"
+        app:layout_constraintTop_toBottomOf="@+id/next_reminder_time_view"
+        app:layout_constraintStart_toEndOf="@+id/water300"
+        android:onClick="addWater"
+        app:layout_constraintEnd_toStartOf="@+id/water500"/>
+
+    <ImageButton
+        android:id="@+id/water500"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="@dimen/image_button_size_width"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/water500"
+        android:onClick="addWater"
+        android:layout_marginEnd="@dimen/image_button_margin_start"
+        android:layout_marginTop="@dimen/base_image_margin_top"
+        app:layout_constraintTop_toBottomOf="@+id/next_reminder_time_view"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

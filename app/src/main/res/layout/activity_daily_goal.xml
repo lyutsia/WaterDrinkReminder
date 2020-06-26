@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".activitys.DailyGoalActivity">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:contentInsetStart="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/heading_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/heading_size"
+                android:text="@string/heading_daily_goal_name"
+                app:contentInsetStart="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStartWithNavigation="0dp"
+                android:textAlignment="center"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/colorButtonText"
+                android:textSize="@dimen/input_text_size"
+                android:textStyle="bold"/>
+        </androidx.appcompat.widget.Toolbar>
+    <TextView
+    android:id="@+id/sex_text_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/sex_name"
+    android:textAlignment="textStart"
+    android:textAllCaps="true"
+    android:textColor="@color/colorText"
+    android:textSize="@dimen/text_size_min1"
+    android:textStyle="bold"
+    android:layout_marginStart="@dimen/image_button_margin_start"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/M_text_view"
+    app:layout_constraintBottom_toTopOf="@+id/M_text_view"/>
+    <TextView
+        android:id="@+id/M_text_view"
+        android:layout_width="@dimen/sex_text_width"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorText"
+        android:text="М"
+        android:onClick="onManClick"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="@dimen/sex_text_size"
+        android:layout_marginTop="@dimen/margin_button_left"
+        app:layout_constraintStart_toStartOf="@+id/weight_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+    <TextView
+        android:id="@+id/W_text_view"
+        android:layout_width="@dimen/sex_text_width"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorText"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:text="Ж"
+        android:onClick="onWomanClick"
+        android:textSize="@dimen/sex_text_size"
+        android:layout_marginEnd="@dimen/image_button_margin_start"
+        android:layout_marginTop="@dimen/margin_button_left"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+
+    <TextView
+        android:id="@+id/weight_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/weight_name"
+        android:textAlignment="textStart"
+        android:textAllCaps="true"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/text_size_min1"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/image_button_margin_start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weight_text_view"
+        app:layout_constraintBottom_toTopOf="@+id/weight_text_view"/>
+
+    <EditText
+        android:id="@+id/weight_text_view"
+        android:layout_width="@dimen/interval_size_width"
+        android:layout_height="@dimen/interval_size_height"
+        android:background="@color/colorButtonText"
+        android:textColor="@color/colorText"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size"
+        android:inputType="numberDecimal"
+        android:onClick="weightEditTextClick"
+        android:maxLength="5"
+        android:layout_marginEnd="@dimen/image_button_margin_start"
+        android:layout_marginTop="@dimen/margin_button_left"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/M_text_view" />
+
+    <TextView
+        android:id="@+id/sport_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:textAlignment="textStart"
+        android:textAllCaps="true"
+
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/text_size_min1"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/image_button_margin_start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sport_text_view"
+        app:layout_constraintBottom_toTopOf="@+id/sport_text_view"/>
+
+    <EditText
+        android:id="@+id/sport_text_view"
+        android:layout_width="@dimen/interval_size_width"
+        android:layout_height="@dimen/interval_size_height"
+        android:background="@color/colorButtonText"
+        android:textColor="@color/colorText"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size"
+        android:inputType="number"
+        android:onClick="sportEditTextClick"
+        android:maxLength="2"
+        android:layout_marginEnd="@dimen/image_button_margin_start"
+        android:layout_marginTop="@dimen/margin_button_left"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weight_text_view" />
+
+
+
+
+    <CheckBox
+        android:id="@+id/manual_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/manual_input_name"
+        android:layout_marginTop="@dimen/image_button_margin_start"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/check_box_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="bold"
+        android:theme="@style/MyCheckBox"
+        android:onClick="ManualCheckBoxChecked"
+        app:layout_constraintTop_toBottomOf="@+id/sport_text_view"/>
+
+
+        <EditText
+            android:id="@+id/volume1_text_view"
+            android:layout_width="@dimen/textView_width"
+            android:layout_height="wrap_content"
+            android:background="@color/colorButtonText"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/input_text_size"
+            android:layout_marginTop="@dimen/image_margin_top"
+            android:maxLength="4"
+            android:onClick="editTextClick"
+            style="@style/MyTextView"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/manual_checkBox"/>
+
+        <TextView
+            android:id="@+id/ml_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin_kg_textView_left"
+            android:text="мл"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/volume1_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/volume1_text_view"
+            app:layout_constraintBottom_toTopOf="@+id/volume1_text_view"/>
+
+    <CheckBox
+        android:id="@+id/not_manual_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calculation_input_name"
+        android:layout_marginTop="@dimen/image_margin_top"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/colorText"
+        android:textSize="@dimen/check_box_text_size"
+        android:theme="@style/MyCheckBox"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="bold"
+        android:onClick="NotManualCheckBoxChecked"
+        app:layout_constraintTop_toBottomOf="@+id/volume1_text_view"/>
+
+        <TextView
+            android:id="@+id/volume2_text_view"
+            android:layout_width="@dimen/textView_width"
+            android:layout_height="wrap_content"
+            android:background="@color/colorButtonText"
+            android:textAlignment="center"
+            android:padding="3dp"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/input_text_size"
+            style="@style/MyTextView"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/not_manual_checkBox"/>
+
+        <TextView
+            android:id="@+id/ml0_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/margin_kg_textView_left"
+            android:text="мл"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/colorText"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/volume2_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/volume2_text_view"
+            app:layout_constraintBottom_toTopOf="@+id/volume2_text_view"/>
+
+
+    <Button
+
+        android:id="@+id/OkButton"
+        android:layout_width="@dimen/button_calcul_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="@dimen/image_margin_top"
+        android:text="@string/calculation_name"
+        android:onClick="onOKClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/volume2_text_view" />
+    <Button
+
+        android:id="@+id/ClearButton"
+        android:layout_width="@dimen/button_calcul_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="@dimen/image_button_margin_start"
+        android:text="@string/clear_button_name"
+        android:onClick="onClearClick"
+        android:textSize="@dimen/text_size_min"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/OkButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.waterdrinkreminder">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon_water"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".data_collection.SexActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".data_collection.Day_timeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".data_collection.Night_timeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".data_collection.SportActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".data_collection.WeightActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.DailyGoalActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.ReminderActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.StatisticActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".data_collection.StartActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".data_collection.IntervalActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activitys.MainActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <receiver android:name=".service.AlarmService" />
+        <receiver android:name=".service.StartAlarmService" />
+        <receiver android:name=".service.EndDayAlarmService" />
+
+    </application>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+
+</manifest>

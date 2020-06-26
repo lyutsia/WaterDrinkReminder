@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">WaterDrinkReminder</string>
+    <string name="weight_name">Ваш вес</string>
+    <string name="night_time_name">Время для сна</string>
+    <string name="day_time_name">Время пробуждения</string>
+    <string name="sex_name">Ваш пол</string>
+    <string name="sport_name">Время физической активности</string>
+    <string name="sport_name1">Физическая активность</string>
+    <string name="interval_name_heading">Интервал между напоминаниями</string>
+    <string name="next_name">далее</string>
+    <string name="clear_button_name">сброс данных</string>
+    <string name="woman_name">женский</string>
+    <string name="man_name">мужской</string>
+    <string name="heading_name">пора пить воду</string>
+    <string name="heading_daily_goal_name">ежедневная цель</string>
+    <string name="manual_input_name">ручной ввод</string>
+    <string name="calculation_input_name">расчет по данным</string>
+    <string name="calculation_name">расчитать</string>
+    <string name="next_reminder_name">следующее напоминание</string>
+    <string name="reminder_name">напоминание</string>
+    <string name="timetable_name">расписание уведомлений</string>
+    <string name="intervall_name">интервал уведомлений</string>
+    <string name="constant_notifications_name">постоянные уведомления</string>
+    <string name="melody_name">мелодия</string>
+    <string name="vibration_name">вибрация</string>
+    <string name="statistics_name">статистика</string>
+    <string name="average_volume_name">средний объем</string>
+    <string name="average_achievement_name">среднее достижение</string>
+    <string name="menu_name">Меню</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+</resources>
